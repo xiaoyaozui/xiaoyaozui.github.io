@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="@[toc] CSS笔记CSS语法123&#x2F;*css的注释*&#x2F; 选择器 声明块（样式名 样式值） 元素选择器标签名&amp;#123;&amp;#125; id选择器#id属性值&amp;#123;&amp;#125; 类选择器.class属性值&amp;#123;&amp;#125; 通配选择器*&amp;#123;&amp;#125; 交集选择器各选择器连写，元素选择器居前 并集选择器各元素器用,隔开写 关系选择器子元素选择器父元素 &gt; 子元素选择器&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS笔记">
+<meta property="og:url" content="http://example.com/2020/12/26/CSS%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="@[toc] CSS笔记CSS语法123&#x2F;*css的注释*&#x2F; 选择器 声明块（样式名 样式值） 元素选择器标签名&amp;#123;&amp;#125; id选择器#id属性值&amp;#123;&amp;#125; 类选择器.class属性值&amp;#123;&amp;#125; 通配选择器*&amp;#123;&amp;#125; 交集选择器各选择器连写，元素选择器居前 并集选择器各元素器用,隔开写 关系选择器子元素选择器父元素 &gt; 子元素选择器&amp;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-26T06:45:35.000Z">
+<meta property="article:modified_time" content="2021-04-30T01:18:06.742Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2020/12/26/CSS笔记/"/>
+
+
+
+
+
+  <title>CSS笔记 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/CSS%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSS笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-12-26T14:45:35+08:00">
+                2020-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>@[toc]</p>
+<h1 id="CSS笔记"><a href="#CSS笔记" class="headerlink" title="CSS笔记"></a>CSS笔记</h1><h2 id="CSS语法"><a href="#CSS语法" class="headerlink" title="CSS语法"></a>CSS语法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">css的注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<p>选择器 声明块（样式名 样式值）</p>
+<h3 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h3><p><code>标签名&#123;&#125;</code></p>
+<h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><p><code>#id属性值&#123;&#125;</code></p>
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><p><code>.class属性值&#123;&#125;</code></p>
+<h3 id="通配选择器"><a href="#通配选择器" class="headerlink" title="通配选择器"></a>通配选择器</h3><p><code>*&#123;&#125;</code></p>
+<h3 id="交集选择器"><a href="#交集选择器" class="headerlink" title="交集选择器"></a>交集选择器</h3><p>各选择器连写，元素选择器居前</p>
+<h3 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h3><p>各元素器用,隔开写</p>
+<h3 id="关系选择器"><a href="#关系选择器" class="headerlink" title="关系选择器"></a>关系选择器</h3><h4 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h4><p><code>父元素 &gt; 子元素选择器&#123;&#125;</code></p>
+<h4 id="后代元素选择器"><a href="#后代元素选择器" class="headerlink" title="后代元素选择器"></a>后代元素选择器</h4><p><code>祖先 后代&#123;&#125;</code></p>
+<h4 id="兄弟元素选择器"><a href="#兄弟元素选择器" class="headerlink" title="兄弟元素选择器"></a>兄弟元素选择器</h4><h5 id="选择下一个："><a href="#选择下一个：" class="headerlink" title="选择下一个："></a>选择下一个：</h5><p><code>前一个 + 后一个&#123;&#125;</code></p>
+<h5 id="选择后面所有："><a href="#选择后面所有：" class="headerlink" title="选择后面所有："></a>选择后面所有：</h5><p><code>前一个 ~ 后一个&#123;&#125;</code></p>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><h4 id="选择含有指定属性的元素"><a href="#选择含有指定属性的元素" class="headerlink" title="选择含有指定属性的元素"></a>选择含有指定属性的元素</h4><p><code>[属性名]&#123;&#125;</code></p>
+<h4 id="选择含有指定属性和属性值的元素"><a href="#选择含有指定属性和属性值的元素" class="headerlink" title="选择含有指定属性和属性值的元素"></a>选择含有指定属性和属性值的元素</h4><p><code>[属性名=属性值]&#123;&#125;</code></p>
+<h4 id="选择含有指定属性和以指定值开头的属性值的元素"><a href="#选择含有指定属性和以指定值开头的属性值的元素" class="headerlink" title="选择含有指定属性和以指定值开头的属性值的元素"></a>选择含有指定属性和以指定值开头的属性值的元素</h4><p><code>[属性名^=属性值]&#123;&#125;</code></p>
+<h4 id="选择含有指定属性和以指定值结尾的属性值的元素"><a href="#选择含有指定属性和以指定值结尾的属性值的元素" class="headerlink" title="选择含有指定属性和以指定值结尾的属性值的元素"></a>选择含有指定属性和以指定值结尾的属性值的元素</h4><p><code>[属性名%=属性值]&#123;&#125;</code></p>
+<h4 id="选择含有指定属性和含有指定值的属性值的元素"><a href="#选择含有指定属性和含有指定值的属性值的元素" class="headerlink" title="选择含有指定属性和含有指定值的属性值的元素"></a>选择含有指定属性和含有指定值的属性值的元素</h4><p><code>[属性名*=属性值]&#123;&#125;</code></p>
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><p>伪类描述一个元素的特殊状态</p>
+<p>一般使用<code>：</code>开头</p>
+<h4 id="第一个子元素"><a href="#第一个子元素" class="headerlink" title="第一个子元素"></a>第一个子元素</h4><p><code>:first-child&#123;&#125;</code></p>
+<h4 id="最后一个子元素"><a href="#最后一个子元素" class="headerlink" title="最后一个子元素"></a>最后一个子元素</h4><p><code>:last-child&#123;&#125;</code></p>
+<h4 id="第n个子元素"><a href="#第n个子元素" class="headerlink" title="第n个子元素"></a>第n个子元素</h4><p><code>:nth-child()&#123;&#125;</code></p>
+<p>特殊值：n 第n个；2n或even 偶数位；2n+1或odd 奇数位</p>
+<p>child基于所有子元素中排序，of-type基于同类型子元素范围中排序</p>
+<h4 id="否定伪类"><a href="#否定伪类" class="headerlink" title="否定伪类"></a>否定伪类</h4><p><code>:not()&#123;&#125;</code></p>
+<h4 id="未访问过的链接"><a href="#未访问过的链接" class="headerlink" title="未访问过的链接"></a>未访问过的链接</h4><p><code>a:link&#123;&#125;</code></p>
+<h4 id="访问过的链接"><a href="#访问过的链接" class="headerlink" title="访问过的链接"></a>访问过的链接</h4><p><code>a:visited&#123;&#125;</code></p>
+<h4 id="鼠标移入的状态"><a href="#鼠标移入的状态" class="headerlink" title="鼠标移入的状态"></a>鼠标移入的状态</h4><p><code>:hover&#123;&#125;</code></p>
+<h4 id="鼠标点击的状态"><a href="#鼠标点击的状态" class="headerlink" title="鼠标点击的状态"></a>鼠标点击的状态</h4><p><code>:active&#123;&#125;</code></p>
+<h3 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h3><p>以<code>::</code>开头</p>
+<h4 id="第一行"><a href="#第一行" class="headerlink" title="第一行"></a>第一行</h4><p><code>::first-line&#123;&#125;</code></p>
+<h4 id="第一个字母"><a href="#第一个字母" class="headerlink" title="第一个字母"></a>第一个字母</h4><p><code>::first-letter&#123;&#125;</code></p>
+<h4 id="鼠标选中的内容"><a href="#鼠标选中的内容" class="headerlink" title="鼠标选中的内容"></a>鼠标选中的内容</h4><p><code>::selection&#123;&#125;</code></p>
+<h4 id="元素的开始"><a href="#元素的开始" class="headerlink" title="元素的开始"></a>元素的开始</h4><p><code>::before&#123;&#125;</code></p>
+<p><code>content=&#39;内容&#39;</code>属性</p>
+<h4 id="元素的最后"><a href="#元素的最后" class="headerlink" title="元素的最后"></a>元素的最后</h4><p><code>::after&#123;&#125;</code></p>
+<h3 id="选择器的权重"><a href="#选择器的权重" class="headerlink" title="选择器的权重"></a>选择器的权重</h3><p><code>!important</code>最高权重</p>
+<p>内联样式</p>
+<p>id选择器</p>
+<p>类和伪类选择器</p>
+<p>元素选择器</p>
+<p>通配选择器</p>
+<p>继承的样式</p>
+<h3 id="长度单位"><a href="#长度单位" class="headerlink" title="长度单位"></a>长度单位</h3><p>像素：px</p>
+<p>百分比：相对于父元素的百分比</p>
+<p>em：1em=1font-size</p>
+<p>rem: 相对于根元素字体单位</p>
+<h3 id="颜色单位"><a href="#颜色单位" class="headerlink" title="颜色单位"></a>颜色单位</h3><h4 id="RGB值"><a href="#RGB值" class="headerlink" title="RGB值"></a>RGB值</h4><p>红绿蓝调配</p>
+<p><code>RGB(数字,数字,数字)</code>      范围0-255</p>
+<p>RGBA值：A为透明度，范围0—1</p>
+<p>十六进制的RGB值：#红绿蓝 范围：00-ff</p>
+<h4 id="HSL值"><a href="#HSL值" class="headerlink" title="HSL值"></a>HSL值</h4><p>色相（0-360） 饱和度（0%-100%） 亮度（0%-100%）</p>
+<h3 id="文档流"><a href="#文档流" class="headerlink" title="文档流"></a>文档流</h3><p>网页的最底层</p>
+<h4 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h4><p>独占一行；默认宽度：父元素的全部；默认高度：内容撑开</p>
+<h4 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h4><p>自左向右水平排列；默认宽度和高度均被内容撑开</p>
+<h3 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h3><p>内容区；内边距；边框；外边距</p>
+<h4 id="内容区"><a href="#内容区" class="headerlink" title="内容区"></a>内容区</h4><p>大小由width,height属性设置</p>
+<h4 id="边框border"><a href="#边框border" class="headerlink" title="边框border"></a>边框border</h4><p>宽度(border-width)，默认三个像素，四个值（上右下左），三个值（上 左右 下），两个值（上下 左右），border-xxx-width(top right bottom left)；颜色(border-color)，默认值为color值（前景色）；样式(border-style)solid 实线 dotted 点状虚线 dashed 虚线 double 双线，默认值为null</p>
+<p>简写：无顺序 空格隔开 border:   border-top:  …</p>
+<h4 id="内边距padding"><a href="#内边距padding" class="headerlink" title="内边距padding"></a>内边距padding</h4><p>一个盒子可见框大小包括内容区，边框，内边距</p>
+<p>padding-xxx(top right bottom left)</p>
+<h4 id="外边距margin"><a href="#外边距margin" class="headerlink" title="外边距margin"></a>外边距margin</h4><p>影响盒子的位置</p>
+<p>设置左上移动自己，设置右下移动别人</p>
+<h3 id="盒子的水平布局"><a href="#盒子的水平布局" class="headerlink" title="盒子的水平布局"></a>盒子的水平布局</h3><p>auto ：width margin-left margin-ringht</p>
+<p>width设置为auto，会调整为最大</p>
+<h3 id="盒子的垂直布局"><a href="#盒子的垂直布局" class="headerlink" title="盒子的垂直布局"></a>盒子的垂直布局</h3><p>overflow处理溢出（visible显示hidden裁去scroll两个滚动条auto需要的滚动条）</p>
+<h3 id="相邻垂直外边距发生折叠"><a href="#相邻垂直外边距发生折叠" class="headerlink" title="相邻垂直外边距发生折叠"></a>相邻垂直外边距发生折叠</h3><p>兄弟元素：取两者之间的较大值；都为负值取绝对值最大；一正一负加和</p>
+<p>父子元素：子会传递给父</p>
+<h3 id="行内元素的盒模型"><a href="#行内元素的盒模型" class="headerlink" title="行内元素的盒模型"></a>行内元素的盒模型</h3><p>不支持设置高度和宽度</p>
+<p>padding,border,margin可设置，但不会影响垂直方向上的布局</p>
+<p>超链接是行内元素</p>
+<h3 id="display"><a href="#display" class="headerlink" title="display"></a>display</h3><p>用来设置元素显示类型</p>
+<p>inline 将元素设置为行元素</p>
+<p>block 将元素设置为块元素</p>
+<p>inline-block 将元素设置为行块元素，可设置宽高又不独占一行</p>
+<p>table 将元素设置为一个表格</p>
+<p>none 元素不在页面中显示，不占页面位置</p>
+<h3 id="visibility"><a href="#visibility" class="headerlink" title="visibility"></a>visibility</h3><p>visible 默认值，正常显示</p>
+<p>hidden 隐藏，但占据页面位置</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/12/23/%E7%A7%91%E7%A0%94%E6%80%BB%E7%BB%93/" rel="next" title="科研总结">
+                <i class="fa fa-chevron-left"></i> 科研总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/12/27/%E7%BD%91%E9%A1%B5%E6%BA%90%E7%A0%81%E5%88%9D%E5%A7%8B%E6%A0%BC%E5%BC%8F/" rel="prev" title="网页源码初始格式">
+                网页源码初始格式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">CSS笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E8%AF%AD%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">CSS语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.1.</span> <span class="nav-text">元素选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#id%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">id选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.3.</span> <span class="nav-text">类选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E9%85%8D%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.4.</span> <span class="nav-text">通配选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A4%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.5.</span> <span class="nav-text">交集选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B6%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.6.</span> <span class="nav-text">并集选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.7.</span> <span class="nav-text">关系选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%90%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.7.1.</span> <span class="nav-text">子元素选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8E%E4%BB%A3%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.7.2.</span> <span class="nav-text">后代元素选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%84%E5%BC%9F%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.7.3.</span> <span class="nav-text">兄弟元素选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E4%B8%8B%E4%B8%80%E4%B8%AA%EF%BC%9A"><span class="nav-number">1.1.7.3.1.</span> <span class="nav-text">选择下一个：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%90%8E%E9%9D%A2%E6%89%80%E6%9C%89%EF%BC%9A"><span class="nav-number">1.1.7.3.2.</span> <span class="nav-text">选择后面所有：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.8.</span> <span class="nav-text">属性选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%90%AB%E6%9C%89%E6%8C%87%E5%AE%9A%E5%B1%9E%E6%80%A7%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.8.1.</span> <span class="nav-text">选择含有指定属性的元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%90%AB%E6%9C%89%E6%8C%87%E5%AE%9A%E5%B1%9E%E6%80%A7%E5%92%8C%E5%B1%9E%E6%80%A7%E5%80%BC%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.8.2.</span> <span class="nav-text">选择含有指定属性和属性值的元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%90%AB%E6%9C%89%E6%8C%87%E5%AE%9A%E5%B1%9E%E6%80%A7%E5%92%8C%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%80%BC%E5%BC%80%E5%A4%B4%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.8.3.</span> <span class="nav-text">选择含有指定属性和以指定值开头的属性值的元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%90%AB%E6%9C%89%E6%8C%87%E5%AE%9A%E5%B1%9E%E6%80%A7%E5%92%8C%E4%BB%A5%E6%8C%87%E5%AE%9A%E5%80%BC%E7%BB%93%E5%B0%BE%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.8.4.</span> <span class="nav-text">选择含有指定属性和以指定值结尾的属性值的元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%90%AB%E6%9C%89%E6%8C%87%E5%AE%9A%E5%B1%9E%E6%80%A7%E5%92%8C%E5%90%AB%E6%9C%89%E6%8C%87%E5%AE%9A%E5%80%BC%E7%9A%84%E5%B1%9E%E6%80%A7%E5%80%BC%E7%9A%84%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.8.5.</span> <span class="nav-text">选择含有指定属性和含有指定值的属性值的元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.9.</span> <span class="nav-text">伪类选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%AD%90%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.9.1.</span> <span class="nav-text">第一个子元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%AD%90%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.9.2.</span> <span class="nav-text">最后一个子元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%ACn%E4%B8%AA%E5%AD%90%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.9.3.</span> <span class="nav-text">第n个子元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%A6%E5%AE%9A%E4%BC%AA%E7%B1%BB"><span class="nav-number">1.1.9.4.</span> <span class="nav-text">否定伪类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AA%E8%AE%BF%E9%97%AE%E8%BF%87%E7%9A%84%E9%93%BE%E6%8E%A5"><span class="nav-number">1.1.9.5.</span> <span class="nav-text">未访问过的链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E8%BF%87%E7%9A%84%E9%93%BE%E6%8E%A5"><span class="nav-number">1.1.9.6.</span> <span class="nav-text">访问过的链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E7%A7%BB%E5%85%A5%E7%9A%84%E7%8A%B6%E6%80%81"><span class="nav-number">1.1.9.7.</span> <span class="nav-text">鼠标移入的状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%9A%84%E7%8A%B6%E6%80%81"><span class="nav-number">1.1.9.8.</span> <span class="nav-text">鼠标点击的状态</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%AA%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.10.</span> <span class="nav-text">伪元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E8%A1%8C"><span class="nav-number">1.1.10.1.</span> <span class="nav-text">第一行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%AD%97%E6%AF%8D"><span class="nav-number">1.1.10.2.</span> <span class="nav-text">第一个字母</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E9%80%89%E4%B8%AD%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">1.1.10.3.</span> <span class="nav-text">鼠标选中的内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E7%9A%84%E5%BC%80%E5%A7%8B"><span class="nav-number">1.1.10.4.</span> <span class="nav-text">元素的开始</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E7%9A%84%E6%9C%80%E5%90%8E"><span class="nav-number">1.1.10.5.</span> <span class="nav-text">元素的最后</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E6%9D%83%E9%87%8D"><span class="nav-number">1.1.11.</span> <span class="nav-text">选择器的权重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E5%BA%A6%E5%8D%95%E4%BD%8D"><span class="nav-number">1.1.12.</span> <span class="nav-text">长度单位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%9C%E8%89%B2%E5%8D%95%E4%BD%8D"><span class="nav-number">1.1.13.</span> <span class="nav-text">颜色单位</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RGB%E5%80%BC"><span class="nav-number">1.1.13.1.</span> <span class="nav-text">RGB值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HSL%E5%80%BC"><span class="nav-number">1.1.13.2.</span> <span class="nav-text">HSL值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E6%B5%81"><span class="nav-number">1.1.14.</span> <span class="nav-text">文档流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9D%97%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.14.1.</span> <span class="nav-text">块元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.14.2.</span> <span class="nav-text">行内元素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.15.</span> <span class="nav-text">盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E5%8C%BA"><span class="nav-number">1.1.15.1.</span> <span class="nav-text">内容区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86border"><span class="nav-number">1.1.15.2.</span> <span class="nav-text">边框border</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E8%BE%B9%E8%B7%9Dpadding"><span class="nav-number">1.1.15.3.</span> <span class="nav-text">内边距padding</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9Dmargin"><span class="nav-number">1.1.15.4.</span> <span class="nav-text">外边距margin</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%B8%83%E5%B1%80"><span class="nav-number">1.1.16.</span> <span class="nav-text">盒子的水平布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E7%9A%84%E5%9E%82%E7%9B%B4%E5%B8%83%E5%B1%80"><span class="nav-number">1.1.17.</span> <span class="nav-text">盒子的垂直布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E9%82%BB%E5%9E%82%E7%9B%B4%E5%A4%96%E8%BE%B9%E8%B7%9D%E5%8F%91%E7%94%9F%E6%8A%98%E5%8F%A0"><span class="nav-number">1.1.18.</span> <span class="nav-text">相邻垂直外边距发生折叠</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E7%9A%84%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.19.</span> <span class="nav-text">行内元素的盒模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#display"><span class="nav-number">1.1.20.</span> <span class="nav-text">display</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#visibility"><span class="nav-number">1.1.21.</span> <span class="nav-text">visibility</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
